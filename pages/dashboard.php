@@ -1098,7 +1098,7 @@ function formatDateToMonthLetters($date) {
                         </a>
                     </li>
                     <li class="nav-item ms-lg-3">
-                        <form action="logout.php" method="post" class="d-inline">
+                        <form action="/auth/logout.php" method="post" class="d-inline">
                             <button type="submit" class="btn btn-danger">
                                 <i class="bi bi-box-arrow-right me-1"></i>Logout
                             </button>
