@@ -358,7 +358,7 @@ if ($is_logged_in) {
     </style>
 </head>
 <body>
-    <?php require('header.php'); ?>
+    <?php require('../includes/header.php'); ?>
 
     <div class="main-content">
         <!-- Header Section -->
@@ -516,7 +516,7 @@ if ($is_logged_in) {
         </div>
     </div>
 
-    <?php require('footer.php'); ?>
+    <?php require('../includes/footer.php'); ?>
 
     <!-- ✅ Scripts -->
     <script>

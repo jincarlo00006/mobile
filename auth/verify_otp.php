@@ -5,8 +5,8 @@ date_default_timezone_set('Asia/Manila');
 session_start();
 header('Content-Type: application/json');
 
-require_once __DIR__ . '/class.phpmailer.php';
-require_once __DIR__ . '/class.smtp.php';
+require_once __DIR__ . '/../utils/class.phpmailer.php';
+require_once __DIR__ . '/../utils/class.smtp.php';
 
 // Configuration
 define('MAX_OTP_ATTEMPTS', 5);

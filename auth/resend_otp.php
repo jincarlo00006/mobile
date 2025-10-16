@@ -2,8 +2,8 @@
 session_start();
 header('Content-Type: application/json');
 
-require_once __DIR__ . '/class.phpmailer.php';
-require_once __DIR__ . '/class.smtp.php';
+require_once __DIR__ . '/../utils/class.phpmailer.php';
+require_once __DIR__ . '/../utils/class.smtp.php';
 
 // --- Check session data ---
 if (!isset($_SESSION['otp_email']) || !isset($_SESSION['pending_registration'])) {

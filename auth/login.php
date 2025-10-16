@@ -1,6 +1,6 @@
 <?php
 // Require your single database file. Adjust path if needed.
-require '../database/database.php';
+require '../../database/database.php';
 session_start();
 
 // Create an instance of the Database class
@@ -8,7 +8,7 @@ $db = new Database();
 
 // Redirect if already logged in
 if (isset($_SESSION['client_id'])) {
-    header('Location: dashboard.php');
+    header('Location: /pages/dashboard.php');
     exit();
 }
 
@@ -20,19 +20,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!$user) {
         $_SESSION['login_error'] = "Username not found.";
-        header("Location: index.php");
+        header("Location: /index.php");
         exit();
     }
 
     if (!password_verify($password, $user['C_password'])) {
         $_SESSION['login_error'] = "Incorrect password.";
-        header("Location: index.php");
+        header("Location: /index.php");
         exit();
     }
 
     if (strtolower($user['Status']) !== 'active') {
         $_SESSION['login_error'] = "Account inactive. Please contact admin.";
-        header("Location: index.php");
+        header("Location: /index.php");
         exit();
     }
 
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['client_fn'] = $user['Client_fn'];
     $_SESSION['C_username'] = $user['C_username'];
     $_SESSION['login_success'] = true;
-    header("Location: dashboard.php");
+    header("Location: /pages/dashboard.php");
     exit();
 }
 ?>

@@ -403,7 +403,7 @@ $is_logged_in = isset($_SESSION['C_username']) && isset($_SESSION['client_id']);
 </head>
 
 <body>
-  <?php require('header.php'); ?>
+  <?php require('../includes/header.php'); ?>
 
   <!-- Hero Section -->
   <section class="hero-section">
@@ -535,7 +535,7 @@ $is_logged_in = isset($_SESSION['C_username']) && isset($_SESSION['client_id']);
     </div>
   </section>
 
-  <?php require('footer.php'); ?>
+  <?php require('../includes/footer.php'); ?>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>

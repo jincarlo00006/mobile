@@ -36,7 +36,7 @@
             <h5 class="footer-title">Quick Links</h5>
             <ul class="footer-links">
               <li>
-                <a href="index.php" class="footer-link">
+                <a href="/index.php" class="footer-link">
                   <i class="bi bi-house-door"></i>
                   <span>Home</span>
                 </a>
@@ -48,13 +48,13 @@
                 </a>
               </li>
               <li>
-                <a href="handyman_type.php" class="footer-link">
+                <a href="/pages/handyman_type.php" class="footer-link">
                   <i class="bi bi-tools"></i>
                   <span>Handyman</span>
                 </a>
               </li>
               <li>
-                <a href="maintenance.php" class="footer-link">
+                <a href="/pages/maintenance.php" class="footer-link">
                   <i class="bi bi-gear"></i>
                   <span>Maintenance</span>
                 </a>
@@ -69,7 +69,7 @@
             <h5 class="footer-title">Services</h5>
             <ul class="footer-links">
               <li>
-                <a href="invoice_history.php" class="footer-link">
+                <a href="/pages/invoice_history.php" class="footer-link">
                   <i class="bi bi-credit-card"></i>
                   <span>Payment Center</span>
                 </a>
@@ -81,7 +81,7 @@
                 
               </li>
               <li>
-                <a href="about.php" class="footer-link">
+                <a href="/pages/about.php" class="footer-link">
                   <i class="bi bi-info-circle"></i>
                   <span>About Us</span>
                 </a>

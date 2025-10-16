@@ -639,7 +639,7 @@ $is_logged_in = isset($_SESSION['client_id']);
 <nav class="navbar navbar-expand-lg fixed-top modern-navbar">
   <div class="container">
     <!-- Brand -->
-    <a class="modern-navbar-brand" href="index.php">
+    <a class="modern-navbar-brand" href="/index.php">
       <i class="bi bi-house-door-fill brand-icon"></i>
       <span>ASRT Spaces</span>
     </a>
@@ -654,13 +654,13 @@ $is_logged_in = isset($_SESSION['client_id']);
       <ul class="navbar-nav ms-auto align-items-center">
         <!-- Main Navigation -->
         <li class="nav-item">
-          <a class="modern-nav-link <?= $current_page == 'index.php' ? 'active' : '' ?>" href="index.php">
+          <a class="modern-nav-link <?= $current_page == 'index.php' ? 'active' : '' ?>" href="/index.php">
             <i class="bi bi-house-door me-2"></i>Home
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="modern-nav-link <?= $current_page == 'invoice_history.php' ? 'active' : '' ?>" href="invoice_history.php" style="position: relative;">
+          <a class="modern-nav-link <?= $current_page == 'invoice_history.php' ? 'active' : '' ?>" href="/pages/invoice_history.php" style="position: relative;">
             <i class="bi bi-credit-card me-2"></i>Payment
             <?php if ($is_logged_in): ?>
               <span class="notification-badge d-none" id="client-unread-admin-badge"></span>
@@ -669,13 +669,13 @@ $is_logged_in = isset($_SESSION['client_id']);
         </li>
 
         <li class="nav-item">
-          <a class="modern-nav-link <?= $current_page == 'handyman_type.php' ? 'active' : '' ?>" href="handyman_type.php">
+          <a class="modern-nav-link <?= $current_page == 'handyman_type.php' ? 'active' : '' ?>" href="/pages/handyman_type.php">
             <i class="bi bi-tools me-2"></i>Services
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="modern-nav-link <?= $current_page == 'maintenance.php' ? 'active' : '' ?>" href="maintenance.php">
+          <a class="modern-nav-link <?= $current_page == 'maintenance.php' ? 'active' : '' ?>" href="/pages/maintenance.php">
             <i class="bi bi-gear me-2"></i>Maintenance
           </a>
         </li>
@@ -684,14 +684,14 @@ $is_logged_in = isset($_SESSION['client_id']);
         <?php if ($is_logged_in): ?>
           <?php if ($current_page != 'dashboard.php'): ?>
           <li class="nav-item ms-2">
-            <a href="dashboard.php" class="modern-btn modern-btn-primary">
+            <a href="/pages/dashboard.php" class="modern-btn modern-btn-primary">
               <i class="bi bi-speedometer2 me-2"></i>Dashboard
             </a>
           </li>
           <?php endif; ?>
           <!-- Show logout as a regular menu item on mobile, dropdown on desktop -->
           <li class="nav-item d-lg-none">
-            <form action="logout.php" method="post" class="d-block">
+            <form action="/auth/logout.php" method="post" class="d-block">
               <button type="submit" class="modern-btn modern-btn-outline w-100 text-danger"><i class="bi bi-box-arrow-right me-2"></i>Logout</button>
             </form>
           </li>
@@ -702,7 +702,7 @@ $is_logged_in = isset($_SESSION['client_id']);
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="clientDropdown">
               <li>
-                <form action="logout.php" method="post" class="d-inline">
+                <form action="/auth/logout.php" method="post" class="d-inline">
                   <button type="submit" class="dropdown-item text-danger"><i class="bi bi-box-arrow-right me-2"></i>Logout</button>
                 </form>
               </li>
@@ -729,7 +729,7 @@ $is_logged_in = isset($_SESSION['client_id']);
 <div class="modal fade modern-modal" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <form method="POST" action="login.php">
+      <form method="POST" action="/auth/login.php">
         <div class="modal-header">
           <h5 class="modal-title d-flex align-items-center">
             <i class="bi bi-person-circle fs-3 me-2 text-primary"></i> 
@@ -784,7 +784,7 @@ $is_logged_in = isset($_SESSION['client_id']);
 <div class="modal fade modern-modal" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
-      <form id="registerForm" method="POST" action="register.php">
+      <form id="registerForm" method="POST" action="/auth/register.php">
         <div class="modal-header">
           <h5 class="modal-title d-flex align-items-center">
             <i class="bi bi-person-plus-fill fs-3 me-2 text-primary"></i> 
