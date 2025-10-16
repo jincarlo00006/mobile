@@ -670,7 +670,7 @@ if (isset($_SESSION['login_error'])) {
   </script>
 <?php endif; ?>
 
-<?php require('header.php'); ?>
+<?php require('includes/header.php'); ?>
 
   <!-- Hero Section -->
   <section id="home" class="hero-section">
@@ -700,7 +700,7 @@ if (isset($_SESSION['login_error'])) {
             <p class="hero-subtitle">Your partner in secure, reliable, and flexible commercial leasing. Our mission is to empower businesses with modern, well-equipped workspaces and outstanding service.</p>
             <div class="d-flex gap-3 flex-wrap">
               <a href="#units" class="btn btn-accent btn-lg">Explore Units</a>
-              <form action="about.php" method="get" style="display: inline;">
+              <form action="/pages/about.php" method="get" style="display: inline;">
                 <button type="submit" class="btn btn-light btn-lg text-dark" style="border: 1px solid #ccc;">About Us</button>
               </form>
             </div>
@@ -980,7 +980,7 @@ if (isset($_SESSION['login_error'])) {
                               </div>
                               <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                  <a href="rent_request.php?space_id=' . urlencode($space['Space_ID']) . '" class="btn btn-success">
+                                  <a href="/pages/rent_request.php?space_id=' . urlencode($space['Space_ID']) . '" class="btn btn-success">
                                       <i class="bi bi-receipt me-2"></i>Request Invoice
                                   </a>
                               </div>
@@ -1185,7 +1185,7 @@ if (isset($_SESSION['login_error'])) {
             $handyman_count = $handyman_counts[$row['JobType_ID']] ?? 0;
         ?>
         <div class="col-lg-2 col-md-4 col-sm-6 animate-on-scroll">
-          <form method="get" action="handyman_type.php">
+          <form method="get" action="/pages/handyman_type.php">
             <input type="hidden" name="jobtype_id" value="<?= htmlspecialchars($row['JobType_ID']) ?>">
             <button type="submit" class="handyman-card w-100 border-0" 
                     <?= ($is_logged_in && $client_is_inactive) ? 'disabled style="opacity:0.6; cursor:not-allowed;"' : '' ?>>
@@ -1217,7 +1217,7 @@ if (isset($_SESSION['login_error'])) {
       </div>
 
       <div class="text-center mt-5">
-        <a href="handyman_type.php" class="btn btn-primary btn-lg">View All Services</a>
+        <a href="/pages/handyman_type.php" class="btn btn-primary btn-lg">View All Services</a>
       </div>
     </div>
   </section>
@@ -1336,7 +1336,7 @@ if (isset($_SESSION['login_error'])) {
   <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <form method="post" action="free_message_send.php">
+        <form method="post" action="/utils/free_message_send.php">
           <div class="modal-header">
             <h5 class="modal-title" id="messageModalLabel"><i class="fas fa-envelope-open-text me-2"></i>Ask us anything!</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1406,7 +1406,7 @@ if (isset($_SESSION['login_error'])) {
     </div>
   </div>
 
-  <?php require('footer.php'); ?>
+  <?php require('includes/footer.php'); ?>
 
   <!-- Bootstrap JS -->
   

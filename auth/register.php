@@ -2,8 +2,8 @@
 session_start();
 header('Content-Type: application/json');
 require_once __DIR__ . '../database/database.php';
-require_once __DIR__ . '/class.phpmailer.php';
-require_once __DIR__ . '/class.smtp.php';
+require_once __DIR__ . '/../utils/class.phpmailer.php';
+require_once __DIR__ . '/../utils/class.smtp.php';
 
 $db = new Database();
 $pdo = $db->pdo ?? null;

@@ -144,7 +144,7 @@ if (!isset($_SESSION['client_id'])): ?>
     </style>
 </head>
 <body>
-    <?php require('header.php'); ?>
+    <?php require('../includes/header.php'); ?>
     
     <div class="main-content">
         <div class="container">
@@ -166,7 +166,7 @@ if (!isset($_SESSION['client_id'])): ?>
         </div>
     </div>
     
-    <?php require('footer.php'); ?>
+    <?php require('../includes/footer.php'); ?>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -733,7 +733,7 @@ $show_kicked_message_in_chat = $is_kicked;
 </head>
 
 <body>
-    <?php require('header.php'); ?>
+    <?php require('../includes/header.php'); ?>
 
     <!-- Payment Header -->
     <section class="payment-header">
@@ -942,7 +942,7 @@ $show_kicked_message_in_chat = $is_kicked;
         </div>
     </div>
 
-    <?php require('footer.php'); ?>
+    <?php require('../includes/footer.php'); ?>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

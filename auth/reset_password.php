@@ -2,9 +2,9 @@
 session_start();
 header('Content-Type: application/json');
 
-require_once '../database/database.php';
-require_once __DIR__ . '/class.phpmailer.php';
-require_once __DIR__ . '/class.smtp.php';
+require_once '../../database/database.php';
+require_once __DIR__ . '/../utils/class.phpmailer.php';
+require_once __DIR__ . '/../utils/class.smtp.php';
 
 function validateResetSession() {
     if (!isset($_SESSION['forgot_otp_verified']) || $_SESSION['forgot_otp_verified'] !== true) {

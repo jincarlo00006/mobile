@@ -32,7 +32,7 @@ session_start();
 $db = new Database();
 
 if (!isset($_SESSION['client_id'])) {
-    header('Location: login.php');
+    header('Location: /auth/login.php');
     exit();
 }
 $client_id = $_SESSION['client_id'];
@@ -1082,23 +1082,23 @@ function formatDateToMonthLetters($date) {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="invoice_history.php">
+                        <a class="nav-link" href="/pages/invoice_history.php">
                             <i class="bi bi-credit-card me-1"></i>Payment
                             <span class="notification-badge d-none" id="client-unread-admin-badge"></span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="handyman_type.php">
+                        <a class="nav-link" href="/pages/handyman_type.php">
                             <i class="bi bi-tools me-1"></i>Handyman
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="maintenance.php">
+                        <a class="nav-link" href="/pages/maintenance.php">
                             <i class="bi bi-gear me-1"></i>Maintenance
                         </a>
                     </li>
                     <li class="nav-item ms-lg-3">
-                        <form action="logout.php" method="post" class="d-inline">
+                        <form action="/auth/logout.php" method="post" class="d-inline">
                             <button type="submit" class="btn btn-danger">
                                 <i class="bi bi-box-arrow-right me-1"></i>Logout
                             </button>
@@ -1420,7 +1420,7 @@ function formatDateToMonthLetters($date) {
                         </div>
                         <h5>Payment Center</h5>
                         <p class="text-muted">View invoices and payment history</p>
-                        <a href="invoice_history.php" class="btn btn-primary">
+                        <a href="/pages/invoice_history.php" class="btn btn-primary">
                             <i class="bi bi-arrow-right me-1"></i>Go to Payment
                         </a>
                     </div>
@@ -1434,7 +1434,7 @@ function formatDateToMonthLetters($date) {
                         </div>
                         <h5>Handyman Services</h5>
                         <p class="text-muted">Request maintenance and repairs</p>
-                        <a href="handyman_type.php" class="btn btn-success">
+                        <a href="/pages/handyman_type.php" class="btn btn-success">
                             <i class="bi bi-arrow-right me-1"></i>Request Service
                         </a>
                     </div>
@@ -1448,7 +1448,7 @@ function formatDateToMonthLetters($date) {
                         </div>
                         <h5>Maintenance</h5>
                         <p class="text-muted">Track your maintenance requests</p>
-                        <a href="maintenance.php" class="btn btn-warning text-white">
+                        <a href="/pages/maintenance.php" class="btn btn-warning text-white">
                             <i class="bi bi-arrow-right me-1"></i>View Status
                         </a>
                     </div>

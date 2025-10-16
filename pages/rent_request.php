@@ -978,7 +978,7 @@ foreach ($pending_requests as $request) {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" action="login.php">
+                    <form method="post" action="/auth/login.php">
                         <div class="mb-3">
                             <label for="username" class="form-label">
                                 <i class="bi bi-person me-2"></i>Username

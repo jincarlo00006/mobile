@@ -8,7 +8,7 @@ unset($_SESSION['client_id']);
 unset($_SESSION['C_username']);
 unset($_SESSION['C_status']); 
 
-header("Location: index.php");
+header("Location: /index.php");
 exit();
 
 

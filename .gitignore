@@ -1,0 +1,47 @@
+# ASRT Commercial Spaces - Git Ignore File
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# PHP
+*.log
+*.cache
+
+# Database
+*.sql
+*.sqlite
+*.db
+
+# Configuration files with sensitive data
+config.php
+.env
+.env.local
+
+# Uploads and temporary files
+uploads/
+tmp/
+temp/
+cache/
+
+# Dependencies (if using Composer)
+vendor/
+composer.lock
+
+# OS specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Test files
+phpunit.xml
+.phpunit.result.cache

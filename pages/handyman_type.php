@@ -384,7 +384,7 @@ $job_types = $db->getAllJobTypes();
 </head>
 
 <body>
-    <?php require('header.php'); ?>
+    <?php require('../includes/header.php'); ?>
     
     <div class="main-content">
         <!-- Hero Section -->
@@ -459,7 +459,7 @@ $job_types = $db->getAllJobTypes();
                         if (!$is_logged_in) {
                             echo '<div class="service-button">';
                         } else {
-                            echo '<form method="get" action="handyman.php" class="h-100">';
+                            echo '<form method="get" action="/pages/handyman.php" class="h-100">';
                             echo '<input type="hidden" name="jobtype_id" value="' . htmlspecialchars($row['JobType_ID']) . '">';
                             echo '<button type="submit" class="service-button">';
                         }
@@ -510,7 +510,7 @@ $job_types = $db->getAllJobTypes();
         </div>
     </div>
 
-    <?php require('footer.php'); ?>
+    <?php require('../includes/footer.php'); ?>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -186,7 +186,7 @@ if (!isset($_SESSION['client_id'])) {
 
 // --- Parameter Validation ---
 if (!isset($_GET['jobtype_id']) || !is_numeric($_GET['jobtype_id'])) {
-    header("Location: index.php");
+    header("Location: /index.php");
     exit();
 }
 $jobtype_id = intval($_GET['jobtype_id']);
@@ -712,7 +712,7 @@ $service_icon = isset($service_icons[strtoupper($jobtype_name)]) ? $service_icon
 </head>
 
 <body>
-    <?php require('header.php'); ?>
+    <?php require('../includes/header.php'); ?>
 
     <!-- Service Header -->
     <div class="service-header">
@@ -807,14 +807,14 @@ $service_icon = isset($service_icons[strtoupper($jobtype_name)]) ? $service_icon
 
         <!-- Back Button -->
         <div class="back-button-container">
-            <a href="handyman_type.php" class="back-button">
+            <a href="/pages/handyman_type.php" class="back-button">
                 <i class="bi bi-arrow-left"></i>
                 Back to Services
             </a>
         </div>
     </div>
 
-    <?php require('footer.php'); ?>
+    <?php require('../includes/footer.php'); ?>
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
